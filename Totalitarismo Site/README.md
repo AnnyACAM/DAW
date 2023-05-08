@@ -4,4 +4,4 @@ Site desenvolvido para as matérias de DAW e Geopolítica, com objetivo de produ
 ditaduras do Salazarismo e Franquismo, utilizando de boas práticas para desenvolvimento.
 
 ## Vizualizar o site
-> Acesse arquivo :page_facing_up: _index.html_ presente na pasta :file_folder: _Totalitarismo Site_ através do :computer: _navegador_
+> Acesse arquivo :page_facing_up:_index.html_ presente na pasta :file_folder:_Totalitarismo Site_ através do :computer:_navegador_
