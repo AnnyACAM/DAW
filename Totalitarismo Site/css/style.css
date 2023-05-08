@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+}
+
+@media(max-device-width: 2000px) {
+    .main_background{ 
+        height: 80vh;
+    }
+    .main_background{
+        background-position: 55% 5%;
+    }
+    .texto{
+        font-size: 1.2rem !important;
+    }
+}
+
+@media(max-device-width: 900px) {
+    .main_background{ 
+        height: 65vh;
+    } 
+
+    .main_background{ 
+        background-position: 55% 30%;
+    } 
+}
+
+@media(max-device-width: 500px) {
+     .main_background{
+        height: 50vh;
+    }
+    .main_background
+    { 
+        background-position: 55% 10%; 
+    } 
+}
+
+.main_background{
+    background-image: url("background.png");
+    background-repeat: no-repeat, repeat;
+    position: relative;
+    background-size: auto;
+    background-attachment:scroll;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.main{
+    background-color: #ABAFA9;
+    color: white;
+}
+
+.titulo{
+    font-size: 3rem;
+    margin-top: 15rem;
+    
+    width: 0%;
+    overflow: hidden;
+    cursor: pointer;
+
+    border-right: 0.15em solid #ABAFA9;
+
+    /*Como o navegador trata espaços em branco
+    * nowrap - ignora as quebras de linha*/
+    white-space: nowrap;
+    
+    color: #fafff7;
+    
+    /*Chamando animações
+    *
+    * steps(100, end) - 60 define quantos frames têm nossa animação. Quanto mais, mais suave.
+    * "end" indica que quando a animação chegar ao fim, o valor final da animação será mantido.
+    * forwards - indica que a animação deve manter seu último estado após seu término.
+    *
+    * step-end - animação passa instantaneamente do valor atual para o próximo valor, sem suavizaçao.
+    * infinite - mesmo de loop.
+    */
+    animation: typing 2s steps(30, end) forwards, blink-caret 850ms step-end 4;
+}
+
+.texto{
+
+    padding: 0rem 4rem;
+    margin-top: -10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+.texto a{
+    text-align: center;
+    text-decoration: none;
+    width: 10rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 3rem;
+    border: solid white 2px;
+    color: white;
+    background-color: #ABAFA9;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.contents {
+    padding: 2rem 4rem;
+    color: #545454;
+}
+.text_content{
+    width: 75%;
+}
+
+.c_2{
+    background-color: #888F87;
+    margin-top: -2rem;
+    color: white;
+}
+
+.titulo_regim{
+    font-size: 3rem;
+    color: #888F87;
+    text-align: center;
+}
+
+.titulo_regimII{
+    font-size: 3rem;
+    color: #535a52;
+    text-align: center;
+}
+
+.b_menu a{
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    margin: 2rem;
+    width: 2rem;
+    color: white;
+    border-radius: 3rem;
+    animation: button_menu 4s ease-in-out infinite;
+    background-image: linear-gradient(#dcecd3, #888F87);
+    border: solid #dcecd3 1px;
+}
+
+.atualmente p{
+    padding: 0;
+}
+
+
+.sidebar{
+    float: right;
+    /*background-color: #535a52;*/
+    background: linear-gradient(-45deg, #dcecd3, #888F87, #5a6358);
+    background-size: 400% 400%;
+    animation: gradient 6s ease infinite;
+    position: sticky;
+    top: 20px;
+    margin: 3rem 3rem;
+    width: 20%;
+    border-radius: 2rem;
+    color:white;
+    padding: 0.8rem;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding-inline-start: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar a{
+    color:white;
+    text-decoration: none;
+}
+
+.sidebar a:hover{
+    text-decoration: underline;
+}
+.sidebar hr{
+    text-align: center;
+    width: 70%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes typing{
+    
+    0% {
+        width: 0
+    }
+    20% {
+        width: 20%;
+    }
+    40% {
+        width: 20%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* from, to - como a animação inicia e como termina
+* nada definido para o inicio
+*/
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: #5a6358;
+    }
+    
+}
+
+@keyframes button_menu {
+    from {background-image: linear-gradient(to right, #dcecd3, #888F87);}
+    to {background-image: linear-gradient(to bottom right,#dcecd3, #888F87);}
+}
