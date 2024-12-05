@@ -1,0 +1,2 @@
+/*Encontrar os 5 principais clientes que mais alugaram filmes*/
+SELECT customer.first_name, COUNT(rental.customer_id) AS numberRental FROM rental, customer WHERE customer.customer_id = rental.customer_id GROUP BY customer.first_name HAVING COUNT(rental.customer_id) > 51;

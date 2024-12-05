@@ -1,0 +1,2 @@
+/*Listar os atores que apareceram em mais de 10 filmes*/
+SELECT film_actor.actor_id, actor.first_name, actor.last_name FROM actor JOIN film_actor ON actor.actor_id = film_actor.actor_id GROUP BY film_actor.actor_id HAVING COUNT(film_actor.actor_id) > 10;

@@ -1,0 +1,2 @@
+/*Encontrar os clientes que alugaram mais de um filme no mesmo dia*/
+SELECT customer.first_name FROM rental JOIN customer ON customer.customer_id = rental.customer_id GROUP BY customer.first_name HAVING COUNT(DATE(rental.rental_date))>1;

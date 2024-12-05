@@ -1,0 +1,2 @@
+/*Encontrar clientes que não alugaram nenhum filme*/
+SELECT customer.first_name FROM customer JOIN rental ON customer.customer_id = rental.customer_id GROUP BY customer.first_name HAVING COUNT(rental.customer_id)= 0;

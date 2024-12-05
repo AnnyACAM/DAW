@@ -1,0 +1,2 @@
+/*Obter a receita total por loja*/
+SELECT store.store_id, SUM(payment.amount) AS soma FROM payment JOIN staff ON staff.staff_id = payment.staff_id JOIN store ON store.store_id = staff.store_id GROUP BY store.store_id;
